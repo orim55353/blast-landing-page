@@ -31,7 +31,6 @@ export default function Card({
       <div>
         <Title>{title}</Title>
         <Text>{text}</Text>
-        <Button onClick={() => window.open(buttonLink)}>Next</Button>
       </div>
       {isOdd && !isMobile && <PreviewImage />}
     </Container>
@@ -42,7 +41,7 @@ const Container = styled.div`
   display: flex;
   gap: 64px;
   padding: 96px 64px;
-  background-color: #292929;
+  background-color: #220b7c;
   background-image: url("/backgrounds/blur.svg");
   border-radius: 10px;
 
@@ -54,7 +53,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 24px;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .preview-image {
@@ -82,7 +81,6 @@ const Title = styled.h6`
 
 const Text = styled.p`
   text-align: justify;
-  font-family: ${({ theme }) => theme.families.sourceSans};
   font-weight: 300;
   color: #ffffffab;
 `;

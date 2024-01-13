@@ -5,13 +5,16 @@ const GlobalStyle = createGlobalStyle`
   *::before,
   *::after {
     box-sizing: border-box;
-    font-family: ${({ theme }) => theme.families.inter};
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
     margin: unset;
     color: #ffffff;
-    background-color: #171717;
+    background-color: #1b0a44;
   }
 
   button,
@@ -27,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
   canvas {
     display: block;
     max-inline-size: 100%;
-    block-size: auto;
+    block-size: unset;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -37,6 +40,27 @@ const GlobalStyle = createGlobalStyle`
   p {
     line-height: 1.75;
     margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: inherit;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  .img-link {
+    cursor: pointer;
   }
 
   @media (prefers-reduced-motion: reduce) {

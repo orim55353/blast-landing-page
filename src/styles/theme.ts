@@ -4,12 +4,8 @@ const theme = {
     secondary: "#ff0080",
   },
   breakpoints: {
-    tablet: "(max-width: 968px)",
-  },
-  families: {
-    inter: "var(--font-inter)",
-    heebo: "var(--font-heebo)",
-    sourceSans: "var(--font-source)",
+    tablet: "(max-width: 768px)",
+    laptop: "(max-width: 1150px)",
   },
   pageOptions: {
     maxWidth: "1056px",

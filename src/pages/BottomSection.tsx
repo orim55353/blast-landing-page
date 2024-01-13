@@ -5,7 +5,7 @@ import cardsData from "@/data/cards-data";
 
 export default function BottomSection() {
   return (
-    <Container>
+    <Container id="bottom">
       <div>
         <Header>Sapien lorem nulla consequat</Header>
         <Subtitle>
@@ -51,7 +51,6 @@ const Header = styled.h5`
 `;
 
 const Subtitle = styled.p`
-  font-family: ${({ theme }) => theme.families.sourceSans};
   font-size: 1.25rem;
   font-weight: 300;
   color: #ffffffab;

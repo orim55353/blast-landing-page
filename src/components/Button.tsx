@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import Chevron from "@/assets/chevron.jpg";
 import Image from "next/image";
 import { ButtonProps } from "@/types/types";
+import DownloadSVG from "@/assets/download.svg";
 
 export default function Button({
   children,
@@ -18,13 +19,27 @@ export default function Button({
   );
 }
 
+const openDownloadLink = () => {
+  window.open("https://www.google.com");
+};
+
+export const DownloadButton = () => (
+  <Image
+    src={DownloadSVG}
+    alt="download from app store"
+    height={0}
+    width={200}
+    className="download-button img-link"
+    onClick={openDownloadLink}
+  />
+);
+
 const StyledButton = styled.button<{ size: ButtonProps["size"] }>`
   background-color: #ffffff;
   color: #000000;
   padding: 0 8px;
   font-size: 1rem;
   font-weight: 700;
-  font-family: ${({ theme }) => theme.families.inter};
   border-radius: 32px;
   border: none;
   cursor: pointer;
