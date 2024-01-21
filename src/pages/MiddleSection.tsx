@@ -1,7 +1,5 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import DJ from "@/assets/dj.jpg";
-import Image from "next/image";
 
 export default function MiddleSection() {
   return (
@@ -12,31 +10,19 @@ export default function MiddleSection() {
           <div>
             <Title>1 Sign up</Title>
             <Text>
-              Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac,
-              pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam
-              at, euismod in lectus. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas. Curabitur
-              sapien risus, commodo eget turpis aliquam.
+              Get started with Blast in just a few clicks! Create your profile, set your preferences, and you're ready to dive into the world of vibrant nightlife. Our easy sign-up process ensures you're quickly on your way to your next great night out.
             </Text>
           </div>
           <div>
             <Title>2 Find your match</Title>
             <Text>
-              Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac,
-              pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam
-              at, euismod in lectus. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas. Curabitur
-              sapien risus, commodo eget turpis aliquam.
+              Discover your perfect party match with ease. Whether you're looking for a lively group to join or inviting others to your table, Blast connects you with like-minded party-goers. Swipe through profiles, explore events, and find your ideal social scene, all tailored to your tastes
             </Text>
           </div>
           <div>
             <Title>3 Party time</Title>
             <Text>
-              Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac,
-              pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam
-              at, euismod in lectus. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas. Curabitur
-              sapien risus, commodo eget turpis aliquam.
+              Now the fun begins! With your match made, it's time to enjoy the night. Finalize your plans, grab your tickets or secure your table through the app, and get ready for an unforgettable experience. Blast is your passport to exciting nights filled with new friends and lasting memories.
             </Text>
           </div>
         </div>
