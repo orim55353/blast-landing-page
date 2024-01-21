@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import styled, { css } from "styled-components";
 import appDemoImage from "@/assets/app-demo.png";
+import appDemoMobileImage from "@/assets/app-demo-mobile.png";
 import blastRocketImage from "@/assets/blast-rocket.png";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import theme from "@/styles/theme";
@@ -29,7 +30,7 @@ export default function TopSection() {
           </div>
         </div>
         <Image
-          src={appDemoImage}
+          src={isLaptop ? appDemoMobileImage : appDemoImage}
           alt="app-demo"
           height={0}
           width={400}
@@ -116,7 +117,7 @@ const SectionDivider = styled.div`
       }
 
       .app-demo {
-        margin: 32px 0 32px 32px;
+        margin: 32px 0 32px;
       }
     }
   `}

@@ -3,7 +3,7 @@ import Head from "next/head";
 import Header from "@/pages/Header";
 import TopSection from "@/pages/TopSection";
 import MiddleSection from "@/pages/MiddleSection";
-import BottomSection from "@/pages/BottomSection";
+import FeaturesSection from "./FeaturesSection";
 import Footer from "@/pages/Footer";
 
 import localFont from "next/font/local";
@@ -21,7 +21,9 @@ export default function Home() {
         <Header />
         <TopSection />
         <MiddleSection />
+        <FeaturesSection />
         {/* <BottomSection /> */}
+
         <Footer />
       </main>
     </>

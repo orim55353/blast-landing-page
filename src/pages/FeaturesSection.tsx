@@ -1,16 +1,14 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import DJ from "@/assets/dj.jpg";
-import Image from "next/image";
 
-export default function MiddleSection() {
+export default function FeaturesSection() {
   return (
-    <Container id="middle">
+    <Container id="features">
       <div>
-        <Header>How it works</Header>
-        <div>
+        <Header>Key Features</Header>
+        <FeaturesContainer>
           <div>
-            <Title>1 Sign up</Title>
+            <Title>Sign up</Title>
             <Text>
               Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac,
               pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam
@@ -20,7 +18,7 @@ export default function MiddleSection() {
             </Text>
           </div>
           <div>
-            <Title>2 Find your match</Title>
+            <Title>Find your match</Title>
             <Text>
               Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac,
               pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam
@@ -30,7 +28,7 @@ export default function MiddleSection() {
             </Text>
           </div>
           <div>
-            <Title>3 Party time</Title>
+            <Title>Party time</Title>
             <Text>
               Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac,
               pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam
@@ -39,7 +37,7 @@ export default function MiddleSection() {
               sapien risus, commodo eget turpis aliquam.
             </Text>
           </div>
-        </div>
+        </FeaturesContainer>
       </div>
     </Container>
   );
@@ -47,7 +45,6 @@ export default function MiddleSection() {
 
 const Container = styled.section`
   padding: 128px ${({ theme }) => theme.pageOptions.padding.default};
-  background-color: #1b0a44;
 
   > div {
     max-width: ${({ theme }) => theme.pageOptions.maxWidth};
@@ -55,49 +52,12 @@ const Container = styled.section`
     display: flex;
     flex-direction: column;
     gap: 64px;
-    justify-content: center;
-
-    > div {
-      display: flex;
-      gap: 64px;
-
-      > div {
-        width: calc(100% / 3);
-      }
-
-      img {
-        border-radius: 10px;
-      }
-
-      ${({ theme }) => css`
-        @media ${theme.breakpoints.tablet} {
-          flex-direction: column;
-
-          > div {
-            width: 100%;
-          }
-        }
-      `}
-    }
-  }
-
-  p {
-    font-weight: 300;
-    color: #bab8c1;
   }
 
   ${({ theme }) => css`
     @media ${theme.breakpoints.tablet} {
       padding: 64px ${({ theme }) => theme.pageOptions.padding.tablet};
       scroll-margin-top: ${({ theme }) => theme.pageOptions.scrollMargin};
-
-      > div {
-        flex-direction: column;
-
-        > div {
-          width: 100%;
-        }
-      }
     }
   `}
 `;
@@ -114,23 +74,34 @@ const Header = styled.h3`
   `};
 `;
 
-const Title = styled.h5`
-  margin-bottom: 24px;
-  font-size: 1.75rem;
+const FeaturesContainer = styled.div`
+  display: flex;
+  gap: 64px;
 
-  &:first-letter {
-    font-size: 4.75rem;
-    font-weight: 900;
-    margin-inline-end: 16px;
+  > div {
+    width: calc(100% / 3);
   }
 
   ${({ theme }) => css`
     @media ${theme.breakpoints.tablet} {
-      font-size: 2rem;
+      flex-direction: column;
 
-      &:first-letter {
-        font-size: 4rem;
+      > div {
+        width: 100%;
       }
+    }
+  `}
+`;
+
+const Title = styled.h5`
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-inline-end: 16px;
+  text-align: center;
+
+  ${({ theme }) => css`
+    @media ${theme.breakpoints.tablet} {
+      font-size: 2rem;
     }
   `};
 `;

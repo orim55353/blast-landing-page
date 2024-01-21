@@ -10,6 +10,7 @@ const theme = {
   pageOptions: {
     maxWidth: "1056px",
     padding: { default: "64px", tablet: "32px" },
+    scrollMargin: "40px",
   },
 };
 

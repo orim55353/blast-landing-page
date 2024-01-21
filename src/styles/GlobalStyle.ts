@@ -14,7 +14,11 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: unset;
     color: #ffffff;
-    background-color: #1b0a44;
+    background-image: url("/backgrounds/lines.svg"),
+      linear-gradient(135deg, #250d5f 0%, #4d22b2 100%);
+    background-size: 118px, cover;
+    background-position: center, 0% 0%;
+    background-repeat: repeat, repeat;
   }
 
   button,
@@ -43,6 +47,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
+    color: #ffffff;
     text-decoration: none;
   }
 

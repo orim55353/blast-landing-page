@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { DownloadButton } from "@/components/Button";
 import Image from "next/image";
-import BlastLogo from "@/assets/blast-with-text.png";
+import Logo from "@/assets/logo.png";
 import Instagram from "@/assets/instagram.svg";
 import Twitterx from "@/assets/twitterx.svg";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
@@ -25,7 +25,7 @@ export default function Footer() {
         <TopSection>
           <div className="logo">
             <h6>Ignite your night</h6>
-            <Image src={BlastLogo} alt="blast" height={150} width={150} />
+            <Image src={Logo} alt="blast" height={150} width={150} />
           </div>
           <div className="info-links">
             <h6>Info</h6>
@@ -48,7 +48,10 @@ export default function Footer() {
           </div>
           <div className="newsletter">
             <h6>Stay up to date!</h6>
-            <input />
+            <InputContainer>
+              <Input placeholder="Sign me up!" />
+              <InputButton type="button">Submit</InputButton>
+            </InputContainer>
           </div>
         </TopSection>
         <BottomSection>
@@ -79,6 +82,7 @@ export default function Footer() {
 
 const FooterContainer = styled.footer`
   padding: 32px ${({ theme }) => theme.pageOptions.padding.default};
+  background-color: #1b0a44;
 
   > div {
     max-width: ${({ theme }) => theme.pageOptions.maxWidth};
@@ -107,6 +111,7 @@ const TopSection = styled.div`
 
   h6 {
     font-size: 2rem;
+    margin-bottom: 16px;
   }
 
   .info-links {
@@ -176,4 +181,39 @@ const BottomSection = styled.div`
       }
     }
   `}
+`;
+
+const InputContainer = styled.div`
+  position: relative;
+`;
+
+const Input = styled.input`
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 6.125px;
+  color: #ffffff;
+  padding-inline: 8px 90px;
+  border: none;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+`;
+
+const InputButton = styled.button`
+  position: absolute;
+  inset-inline-end: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: calc(100% - 8px);
+  border: 0;
+  color: #f7f7f7;
+  font-size: 18px;
+  background: linear-gradient(250deg, #250d5f40 0%, #4d22b2 100%);
+  border-radius: 6.125px;
+  padding-inline: 12px;
+  cursor: pointer;
 `;
