@@ -10,19 +10,25 @@ export default function MiddleSection() {
           <div>
             <Title>1 Sign up</Title>
             <Text>
-              Get started with Blast in just a few clicks! Create your profile, set your preferences, and you're ready to dive into the world of vibrant nightlife. Our easy sign-up process ensures you're quickly on your way to your next great night out.
+              {
+                "Get started with Blast in just a few clicks! Create your profile, set your preferences, and you're ready to dive into the world of vibrant nightlife. Our easy sign-up process ensures you're quickly on your way to your next great night out."
+              }
             </Text>
           </div>
           <div>
             <Title>2 Find your match</Title>
             <Text>
-              Discover your perfect party match with ease. Whether you're looking for a lively group to join or inviting others to your table, Blast connects you with like-minded party-goers. Swipe through profiles, explore events, and find your ideal social scene, all tailored to your tastes
+              {
+                "Discover your perfect party match with ease. Whether you're looking for a lively group to join or inviting others to your table, Blast connects you with like-minded party-goers. Swipe through profiles, explore events, and find your ideal social scene, all tailored to your tastes"
+              }
             </Text>
           </div>
           <div>
             <Title>3 Party time</Title>
             <Text>
-              Now the fun begins! With your match made, it's time to enjoy the night. Finalize your plans, grab your tickets or secure your table through the app, and get ready for an unforgettable experience. Blast is your passport to exciting nights filled with new friends and lasting memories.
+              {
+                "Now the fun begins! With your match made, it's time to enjoy the night. Finalize your plans, grab your tickets or secure your table through the app, and get ready for an unforgettable experience. Blast is your passport to exciting nights filled with new friends and lasting memories."
+              }
             </Text>
           </div>
         </div>

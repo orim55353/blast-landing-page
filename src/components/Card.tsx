@@ -17,7 +17,7 @@ export default function Card({
   buttonLink,
   isOdd,
 }: cardProps) {
-  const imageData = { src: imageUrl, alt: "", height: 0, width: 0 };
+  const imageData = { src: imageUrl, alt: "preview", height: 0, width: 0 };
   const PreviewImage = () => (
     <div>
       <Image className="preview-image" {...imageData} />

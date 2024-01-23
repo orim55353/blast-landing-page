@@ -22,59 +22,56 @@ export default function Footer() {
   return (
     <FooterContainer>
       <div>
-        <TopSection>
-          <div className="logo">
-            <h6>Ignite your night</h6>
-            <Image src={Logo} alt="blast" height={150} width={150} />
-          </div>
-          <div className="info-links">
-            <h6>Info</h6>
-            <nav>
-              <ul>
-                <li>
-                  <a>Terms and conditions</a>
-                </li>
-                <li>
-                  <a>Privacy policy</a>
-                </li>
-                <li>
-                  <a>Guidelines</a>
-                </li>
-                <li>
-                  <a>Contact</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div className="newsletter">
-            <h6>Stay up to date!</h6>
-            <InputContainer>
-              <Input placeholder="Sign me up!" />
-              <InputButton type="button">Submit</InputButton>
-            </InputContainer>
-          </div>
-        </TopSection>
-        <BottomSection>
+        <div className="logo">
+          <Image src={Logo} alt="blast" height={150} width={150} />
+        </div>
+        <div className="info-links">
+          <h6>Info</h6>
+          <nav>
+            <ul>
+              <li>
+                <a>Terms and conditions</a>
+              </li>
+              <li>
+                <a>Privacy policy</a>
+              </li>
+              <li>
+                <a>Guidelines</a>
+              </li>
+              <li>
+                <a>Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className="newsletter">
+          <h6>Stay up to date!</h6>
+          <InputContainer>
+            <Input placeholder="Sign me up!" />
+            <InputButton type="button">Submit</InputButton>
+          </InputContainer>
+        </div>
+        <div className="button-container">
           <DownloadButton />
-          {!isMobile && <Copyright />}
-          <div className="social-links">
-            <Image
-              src={Instagram}
-              alt="instagram"
-              height={40}
-              width={40}
-              className="img-link"
-            />
-            <Image
-              src={Twitterx}
-              alt="twitter / x"
-              height={40}
-              width={40}
-              className="img-link"
-            />
-          </div>
-          {isMobile && <Copyright />}
-        </BottomSection>
+        </div>
+        {!isMobile && <Copyright />}
+        <div className="social-links">
+          <Image
+            src={Instagram}
+            alt="instagram"
+            height={40}
+            width={40}
+            className="img-link"
+          />
+          <Image
+            src={Twitterx}
+            alt="twitter / x"
+            height={40}
+            width={40}
+            className="img-link"
+          />
+        </div>
+        {isMobile && <Copyright />}
       </div>
     </FooterContainer>
   );
@@ -87,101 +84,134 @@ const FooterContainer = styled.footer`
   > div {
     max-width: ${({ theme }) => theme.pageOptions.maxWidth};
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 64px;
-  }
-`;
 
-const TopSection = styled.div`
-  display: flex;
-  justify-content: space-between;
+    ${({ theme }) => css`
+      @media ${theme.breakpoints.tablet} {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 32px;
+      }
+    `}
+  }
 
   .logo,
   .info-links,
-  .newsletter {
-    width: calc(100% / 3);
-  }
-
-  .logo {
+  .copyright,
+  .button-container {
     display: flex;
+    align-items: center;
     flex-direction: column;
-    gap: 16px;
   }
 
   h6 {
     font-size: 2rem;
-    margin-bottom: 16px;
+  }
+
+  .newsletter {
+    h6 {
+      margin-bottom: 16px;
+    }
+
+    ${({ theme }) => css`
+      @media ${theme.breakpoints.tablet} {
+        text-align: center;
+      }
+    `}
   }
 
   .info-links {
     nav {
       font-weight: 300;
-
       ul {
         display: flex;
         flex-direction: column;
         gap: 8px;
+        text-align: center;
       }
     }
-  }
-
-  ${({ theme }) => css`
-    @media ${theme.breakpoints.tablet} {
-      flex-direction: column;
-      align-items: center;
-      gap: 32px;
-    }
-
-    .logo,
-    .info-links,
-    .newsletter {
-      width: 100%;
-    }
-  `}
-`;
-
-const BottomSection = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  .copyright,
-  .social-links {
-    width: calc(100% / 3);
-  }
-
-  .copyright {
-    text-align: center;
   }
 
   .social-links {
     display: flex;
     justify-content: center;
-    gap: 32px;
+    gap: 24px;
   }
-
-  ${({ theme }) => css`
-    @media ${theme.breakpoints.tablet} {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 32px;
-
-      .copyright,
-      .social-links {
-        width: 100%;
-      }
-
-      .copyright {
-        text-align: start;
-      }
-
-      .social-links {
-        justify-content: flex-start;
-      }
-    }
-  `}
 `;
+
+// const TopSection = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+
+//   .logo {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 16px;
+//   }
+
+//   h6 {
+//     font-size: 2rem;
+//     margin-bottom: 16px;
+//   }
+
+//   .info-links {
+//     nav {
+//       font-weight: 300;
+
+//       ul {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 8px;
+//       }
+//     }
+//   }
+
+//   ${({ theme }) => css`
+//     @media ${theme.breakpoints.tablet} {
+//       flex-direction: column;
+//       align-items: center;
+//       gap: 32px;
+//     }
+//   `}
+// `;
+
+// const BottomSection = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+
+//   .copyright {
+//     text-align: center;
+//   }
+
+//   .social-links {
+//     display: flex;
+//     justify-content: center;
+//     gap: 32px;
+//   }
+
+//   ${({ theme }) => css`
+//     @media ${theme.breakpoints.tablet} {
+//       flex-direction: column;
+//       align-items: flex-start;
+//       gap: 32px;
+
+//       .copyright,
+//       .social-links {
+//         width: 100%;
+//       }
+
+//       .copyright {
+//         text-align: start;
+//       }
+
+//       .social-links {
+//         justify-content: flex-start;
+//       }
+//     }
+//   `}
+// `;
 
 const InputContainer = styled.div`
   position: relative;

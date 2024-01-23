@@ -1,5 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import blastRocketImage from "@/assets/blast-rocket.png";
+import Image from "next/image";
 
 export default function FeaturesSection() {
   return (
@@ -8,33 +10,38 @@ export default function FeaturesSection() {
         <Header>Key Features</Header>
         <FeaturesContainer>
           <div>
-            <Title>Sign up</Title>
+            <Image src={blastRocketImage} alt="rocket" width={0} height={0} />
+            <Title>Title</Title>
             <Text>
-              Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac,
-              pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam
-              at, euismod in lectus. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas. Curabitur
-              sapien risus, commodo eget turpis aliquam.
+              Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac.
             </Text>
           </div>
           <div>
-            <Title>Find your match</Title>
+            <Image src={blastRocketImage} alt="rocket" width={0} height={0} />
+            <Title>Title</Title>
             <Text>
-              Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac,
-              pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam
-              at, euismod in lectus. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas. Curabitur
-              sapien risus, commodo eget turpis aliquam.
+              Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac.
             </Text>
           </div>
           <div>
-            <Title>Party time</Title>
+            <Image src={blastRocketImage} alt="rocket" width={0} height={0} />
+            <Title>Title</Title>
             <Text>
-              Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac,
-              pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam
-              at, euismod in lectus. Pellentesque habitant morbi tristique
-              senectus et netus et malesuada fames ac turpis egestas. Curabitur
-              sapien risus, commodo eget turpis aliquam.
+              Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac.
+            </Text>
+          </div>
+          <div>
+            <Image src={blastRocketImage} alt="rocket" width={0} height={0} />
+            <Title>Title</Title>
+            <Text>
+              Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac.
+            </Text>
+          </div>
+          <div>
+            <Image src={blastRocketImage} alt="rocket" width={0} height={0} />
+            <Title>Title</Title>
+            <Text>
+              Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac.
             </Text>
           </div>
         </FeaturesContainer>
@@ -76,15 +83,36 @@ const Header = styled.h3`
 
 const FeaturesContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 64px;
 
   > div {
-    width: calc(100% / 3);
+    width: calc(100% / 3 - 48px);
+    background-color: #1b0a44;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 18px;
+
+    > img {
+      width: 100px;
+    }
   }
+
+  ${({ theme }) => css`
+    @media ${theme.breakpoints.laptop} {
+      > div {
+        width: calc(100% / 2 - 48px);
+      }
+    }
+  `}
 
   ${({ theme }) => css`
     @media ${theme.breakpoints.tablet} {
       flex-direction: column;
+      gap: 32px;
 
       > div {
         width: 100%;
@@ -94,10 +122,10 @@ const FeaturesContainer = styled.div`
 `;
 
 const Title = styled.h5`
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin-inline-end: 16px;
+  font-size: 1.75rem;
+  font-weight: 600;
   text-align: center;
+  margin-top: 16px;
 
   ${({ theme }) => css`
     @media ${theme.breakpoints.tablet} {
@@ -107,6 +135,7 @@ const Title = styled.h5`
 `;
 
 const Text = styled.p`
-  text-align: justify;
-  margin: 24px 0;
+  text-align: center;
+  padding-inline: 16px;
+  font-weight: 300;
 `;
