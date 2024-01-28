@@ -11,9 +11,9 @@ export default function guidelines() {
             Respect Others
             <ol>
               <li>
-                Be Kind and Courteous: We're a diverse community with users from
-                different backgrounds. Please be respectful and considerate to
-                all users.
+                Be Kind and Courteous: {"We're"} a diverse community with users
+                from different backgrounds. Please be respectful and considerate
+                to all users.
               </li>
               <li>
                 No Harassment or Bullying: Make sure everyone feels safe.

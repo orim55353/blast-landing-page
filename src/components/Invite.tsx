@@ -5,7 +5,7 @@ export default function Invite() {
   return (
     <Container>
       <div>
-        <Title>You've been invited to join Blast!</Title>
+        <Title>{"You've"} been invited to join Blast!</Title>
         <Subtitle>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore hic
           assumenda, debitis quaerat quae sapiente facere saepe, ratione nihil,

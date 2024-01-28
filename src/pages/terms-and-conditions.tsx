@@ -12,10 +12,10 @@ export default function TermsAndConditions() {
             to facilitate connections between individuals looking to join tables
             or invite groups to their tables at nightclubs. This app is operated
             by [Your Company Name], with its registered office located at [Your
-            Company's Registered Address]. By using Blast, you agree to be bound
-            by these Terms and Conditions ("Terms"). Please read these Terms
-            carefully before using our service. If you do not agree with the
-            Terms, do not use Blast.
+            {"Company's"} Registered Address]. By using Blast, you agree to be
+            bound by these Terms and Conditions ({"Terms"}). Please read these
+            Terms carefully before using our service. If you do not agree with
+            the Terms, do not use Blast.
           </li>
           <li>
             User Eligibility and Account Registration You must be at least 18
@@ -78,7 +78,7 @@ export default function TermsAndConditions() {
           </li>
           <li>
             Payment, Refund, and Cancellation Payments are processed through
-            Stripe when a user's request to join a table is accepted. The
+            Stripe when a {"user's"} request to join a table is accepted. The
             specific refund and cancellation policies are set by the individual
             clubs.
           </li>
