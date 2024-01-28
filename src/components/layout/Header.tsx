@@ -1,30 +1,41 @@
-import React, { useEffect, useState } from "react";
+"use client";
+
+import { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import Logo from "@/assets/logo.png";
 import Image from "next/image";
 import DownloadSVG from "@/assets/download.svg";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import theme from "@/styles/theme";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { sf } from "@/pages";
 
-export default function Header() {
+type HeaderProps = {
+  darkenHeader?: boolean;
+};
+
+export default function Header({ darkenHeader }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
   const isLaptop = useMediaQuery(theme.breakpoints.laptop);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   const toggleNavbar = () => setIsNavBarOpen((prev) => !prev);
 
   const handleCustomScroll = (targetId: string) => {
     const targetElement = document.querySelector(`#${targetId}`);
 
-    if (targetElement instanceof HTMLElement) {
+    if (targetElement instanceof HTMLElement && isHomePage) {
       targetElement.scrollIntoView({
         behavior: "smooth",
         block: "start",
         inline: "nearest",
       });
-
-      setIsNavBarOpen(false);
     }
+
+    setIsNavBarOpen(false);
   };
 
   useEffect(() => {
@@ -43,8 +54,25 @@ export default function Header() {
     };
   }, []);
 
+  const LogoClick = () => {
+    if (isHomePage) {
+      window.scrollTo({ top: 0 });
+      closeHeader();
+    } else {
+      window.location.href = "/";
+    }
+  };
+
+  const closeHeader = () => {
+    setIsNavBarOpen(false);
+  };
+
   return (
-    <Heading $isScrolled={isScrolled}>
+    <Heading
+      $isScrolled={isScrolled}
+      $darkenHeader={darkenHeader}
+      className={sf.className}
+    >
       <nav>
         <Image
           src={Logo}
@@ -52,8 +80,8 @@ export default function Header() {
           width={200}
           alt="blast"
           className="app-logo"
-          onClick={() => window.scrollTo({ top: 0 })}
-        />{" "}
+          onClick={LogoClick}
+        />
         {isLaptop && (
           <div
             onClick={toggleNavbar}
@@ -71,14 +99,26 @@ export default function Header() {
               height={0}
               width={235}
               alt="blast"
-              onClick={() => handleCustomScroll("top")}
+              onClick={LogoClick}
             />
           )}
           <li>
-            <a onClick={() => handleCustomScroll("middle")}>How it works</a>
+            {isHomePage ? (
+              <a onClick={() => handleCustomScroll("middle")}>How it works</a>
+            ) : (
+              <Link href="/#middle" onClick={closeHeader}>
+                How it works
+              </Link>
+            )}
           </li>
           <li>
-            <a onClick={() => handleCustomScroll("features")}>Key features</a>
+            {isHomePage ? (
+              <a onClick={() => handleCustomScroll("features")}>Key features</a>
+            ) : (
+              <Link href="/#features" onClick={closeHeader}>
+                Key features
+              </Link>
+            )}
           </li>
           <li>
             <Image
@@ -95,13 +135,16 @@ export default function Header() {
   );
 }
 
-const Heading = styled.header<{ $isScrolled: boolean }>`
+const Heading = styled.header<{
+  $isScrolled: boolean;
+  $darkenHeader?: boolean;
+}>`
   position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: ${({ $isScrolled }) =>
-    $isScrolled ? "#1b0a44" : "transparent"};
+  background-color: ${({ $isScrolled, $darkenHeader }) =>
+    $isScrolled ? "#1b0a4495" : $darkenHeader ? "#1b0a44" : "transparent"};
   transition: all 0.2s ease-in-out;
   width: 100%;
   z-index: 5;

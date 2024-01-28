@@ -1,4 +1,3 @@
-import React from "react";
 import styled, { css } from "styled-components";
 import Chevron from "@/assets/chevron.jpg";
 import Image from "next/image";

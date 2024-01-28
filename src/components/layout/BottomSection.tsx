@@ -1,5 +1,4 @@
 import Card from "@/components/Card";
-import React from "react";
 import styled, { css } from "styled-components";
 import cardsData from "@/data/cards-data";
 

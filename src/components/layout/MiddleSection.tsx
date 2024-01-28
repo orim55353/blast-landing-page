@@ -1,4 +1,3 @@
-import React from "react";
 import styled, { css } from "styled-components";
 
 export default function MiddleSection() {
@@ -81,7 +80,7 @@ const Container = styled.section`
   ${({ theme }) => css`
     @media ${theme.breakpoints.tablet} {
       padding: 64px ${({ theme }) => theme.pageOptions.padding.tablet};
-      scroll-margin-top: ${({ theme }) => theme.pageOptions.scrollMargin};
+      scroll-margin-top: 40px;
 
       > div {
         flex-direction: column;

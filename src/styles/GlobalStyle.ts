@@ -68,6 +68,10 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,

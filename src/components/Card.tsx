@@ -1,8 +1,6 @@
 import { cardData } from "@/types/types";
 import Image from "next/image";
-import React from "react";
 import styled, { css } from "styled-components";
-import Button from "./Button";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import theme from "@/styles/theme";
 

@@ -1,9 +1,7 @@
 import Image from "next/image";
-import React from "react";
 import styled, { css } from "styled-components";
 import appDemoImage from "@/assets/app-demo.png";
 import appDemoMobileImage from "@/assets/app-demo-mobile.png";
-import blastRocketImage from "@/assets/blast-rocket.png";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import theme from "@/styles/theme";
 import { DownloadButton } from "@/components/Button";
@@ -15,13 +13,6 @@ export default function TopSection() {
     <Container id="top">
       <SectionDivider>
         <div>
-          <Image
-            src={blastRocketImage}
-            alt="blast-rocket"
-            className="blast-rocket"
-            height={125}
-            width={125}
-          />
           <div>
             <Header>IGNITE</Header>
             <Header $isRed={true}>YOUR</Header>
@@ -44,7 +35,7 @@ export default function TopSection() {
 
 const Container = styled.section`
   padding: ${({ theme }) => theme.pageOptions.padding.default};
-  padding-top: 128px;
+  padding-top: 192px;
   background-image: url("/backgrounds/blur.svg"),
     linear-gradient(to bottom, #220b7c30, #1b0a4499),
     url("/backgrounds/party.jpg");
@@ -93,10 +84,7 @@ const SectionDivider = styled.div`
   > div {
     display: flex;
     gap: 32px;
-    .blast-rocket {
-      height: 125px;
-      width: 125px;
-    }
+    margin-inline-start: 96px;
 
     > div {
       display: flex;
@@ -114,6 +102,7 @@ const SectionDivider = styled.div`
 
       > div {
         justify-content: center;
+        margin-inline-start: 0;
       }
 
       .app-demo {

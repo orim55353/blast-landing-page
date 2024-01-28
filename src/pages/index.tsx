@@ -1,11 +1,7 @@
 import Head from "next/head";
-
-import Header from "@/pages/Header";
-import TopSection from "@/pages/TopSection";
-import MiddleSection from "@/pages/MiddleSection";
-import FeaturesSection from "./FeaturesSection";
-import Footer from "@/pages/Footer";
-
+import TopSection from "@/components/layout/TopSection";
+import MiddleSection from "@/components/layout/MiddleSection";
+import FeaturesSection from "../components/layout/FeaturesSection";
 import localFont from "next/font/local";
 
 export default function Home() {
@@ -27,19 +23,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${sf.className}`}>
-        <Header />
         <TopSection />
         <MiddleSection />
         <FeaturesSection />
         {/* <BottomSection /> */}
-
-        <Footer />
       </main>
     </>
   );
 }
 
-const sf = localFont({
+export const sf = localFont({
   src: [
     {
       path: "./fonts/SFUIDisplay-Light.ttf",

@@ -1,4 +1,3 @@
-import React from "react";
 import styled, { css } from "styled-components";
 import { DownloadButton } from "@/components/Button";
 import Image from "next/image";
@@ -7,6 +6,8 @@ import Instagram from "@/assets/instagram.svg";
 import Twitterx from "@/assets/twitterx.svg";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import theme from "@/styles/theme";
+import { sf } from "@/pages";
+import Link from "next/link";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -20,7 +21,7 @@ export default function Footer() {
   );
 
   return (
-    <FooterContainer>
+    <FooterContainer className={sf.className}>
       <div>
         <div className="logo">
           <Image src={Logo} alt="blast" height={150} width={150} />
@@ -30,13 +31,13 @@ export default function Footer() {
           <nav>
             <ul>
               <li>
-                <a>Terms and conditions</a>
+                <Link href="terms-and-conditions">Terms and conditions</Link>
               </li>
               <li>
-                <a>Privacy policy</a>
+                <Link href="privacy-policy">Privacy policy</Link>
               </li>
               <li>
-                <a>Guidelines</a>
+                <Link href="guidelines">Guidelines</Link>
               </li>
               <li>
                 <a>Contact</a>

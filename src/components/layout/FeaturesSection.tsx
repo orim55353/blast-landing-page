@@ -1,4 +1,3 @@
-import React from "react";
 import styled, { css } from "styled-components";
 import blastRocketImage from "@/assets/blast-rocket.png";
 import Image from "next/image";
@@ -64,7 +63,7 @@ const Container = styled.section`
   ${({ theme }) => css`
     @media ${theme.breakpoints.tablet} {
       padding: 64px ${({ theme }) => theme.pageOptions.padding.tablet};
-      scroll-margin-top: ${({ theme }) => theme.pageOptions.scrollMargin};
+      scroll-margin-top: 175px;
     }
   `}
 `;
