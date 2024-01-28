@@ -1,9 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const ListPage = styled.main`
-  margin-top: 160px;
-  padding-inline: 64px;
-  max-height: calc(100vh - 525px);
+  padding: 160px 64px 64px;
   overflow-y: scroll;
 
   > div {
@@ -14,8 +12,6 @@ export const ListPage = styled.main`
   ${({ theme }) => css`
     @media ${theme.breakpoints.tablet} {
       padding: 96px 32px 32px;
-      margin: 0;
-      max-height: unset;
     }
   `}
 
