@@ -35,27 +35,27 @@ export default function Home() {
 export const sf = localFont({
   src: [
     {
-      path: "./fonts/SFUIDisplay-Light.ttf",
+      path: "../styles/fonts/SFUIDisplay-Light.ttf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "./fonts/SFUIDisplay-Regular.otf",
+      path: "../styles/fonts/SFUIDisplay-Regular.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/SFUIDisplay-Semibold.otf",
+      path: "../styles/fonts/SFUIDisplay-Semibold.otf",
       weight: "600",
       style: "normal",
     },
     {
-      path: "./fonts/SFUIDisplay-Bold.ttf",
+      path: "../styles/fonts/SFUIDisplay-Bold.ttf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "./fonts/SFUIDisplay-Heavy.otf",
+      path: "../styles/fonts/SFUIDisplay-Heavy.otf",
       weight: "900",
       style: "normal",
     },
