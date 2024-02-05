@@ -4,6 +4,18 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+
+  headers: [
+    {
+      source: "/.well-known/apple-app-site-association",
+      headers: [
+        {
+          key: "Content-Type",
+          value: "application/json",
+        },
+      ],
+    },
+  ],
 };
 
 module.exports = nextConfig;
