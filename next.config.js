@@ -4,7 +4,6 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-
   headers: [
     {
       source: "/.well-known/apple-app-site-association",
