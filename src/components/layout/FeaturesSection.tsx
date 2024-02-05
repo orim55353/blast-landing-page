@@ -1,5 +1,10 @@
 import styled, { css } from "styled-components";
 import blastRocketImage from "@/assets/blast-rocket.png";
+import puzzle from "@/assets/puzzle.svg";
+import ticket from "@/assets/ticket.svg";
+import shield from "@/assets/shield.svg";
+import chat from "@/assets/chat.svg";
+import personal from "@/assets/personal.svg";
 import Image from "next/image";
 
 export default function FeaturesSection() {
@@ -9,38 +14,38 @@ export default function FeaturesSection() {
         <Header>Key Features</Header>
         <FeaturesContainer>
           <div>
-            <Image src={blastRocketImage} alt="rocket" width={0} height={0} />
-            <Title>Title</Title>
+            <Image src={puzzle} alt="rocket" width={10} height={10} />
+            <Title>User-Centric Matching</Title>
             <Text>
-              Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac.
+              Connect with your ideal party crowed based on shared interests
             </Text>
           </div>
           <div>
-            <Image src={blastRocketImage} alt="rocket" width={0} height={0} />
-            <Title>Title</Title>
+            <Image src={ticket} alt="rocket" width={0} height={0} />
+            <Title>Tickets and Tables</Title>
             <Text>
-              Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac.
+              Book your spot at the hottest events and tables instantly
             </Text>
           </div>
           <div>
-            <Image src={blastRocketImage} alt="rocket" width={0} height={0} />
-            <Title>Title</Title>
+            <Image src={shield} alt="rocket" width={0} height={0} />
+            <Title>Safe & Secure</Title>
             <Text>
-              Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac.
+              Party with peace of mind, thanks to our top-notch security
             </Text>
           </div>
           <div>
-            <Image src={blastRocketImage} alt="rocket" width={0} height={0} />
-            <Title>Title</Title>
+            <Image src={chat} alt="rocket" width={0} height={0} />
+            <Title>In app Chat</Title>
             <Text>
-              Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac.
+              Coordinate easily with in-app messaging
             </Text>
           </div>
           <div>
-            <Image src={blastRocketImage} alt="rocket" width={0} height={0} />
-            <Title>Title</Title>
+            <Image src={personal} alt="rocket" width={0} height={0} />
+            <Title>Personalized Picks</Title>
             <Text>
-              Tempus malesuada et a elit. Donec urna ex, lacinia in purus ac.
+              Discover events and groups tailored just for you
             </Text>
           </div>
         </FeaturesContainer>
@@ -96,7 +101,8 @@ const FeaturesContainer = styled.div`
     border-radius: 18px;
 
     > img {
-      width: 100px;
+      width: 40px;
+      filter: invert(100%);
     }
   }
 
@@ -121,10 +127,10 @@ const FeaturesContainer = styled.div`
 `;
 
 const Title = styled.h5`
-  font-size: 1.75rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
   text-align: center;
-  margin-top: 16px;
+  margin: 8px 0 8px 0;
 
   ${({ theme }) => css`
     @media ${theme.breakpoints.tablet} {
