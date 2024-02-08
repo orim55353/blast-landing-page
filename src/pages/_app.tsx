@@ -28,7 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property="og:image" content="/og-image.jpg" />
         <meta
           name="google-site-verification"
-          content="mV7st80SLj0GotBsiS1crHyKXTJ4okzAVMJjSvfN-Vk"
+          content="YqiDehOEK9B7Pfd3DQoLdIuoQp7474yGi_-9SwwU79I"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
