@@ -47,7 +47,7 @@ export default function PrivacyPolicy() {
             <ol>
               <li>
                 Account Information
-                <p>You may update, correct, or delete information about you at any time by logging into your account or contacting us at blastCs@blastit.app.</p>
+                <p>You may update, correct, or delete information about you at any time by logging into your account or contacting us at blast.cto@gmail.com.</p>
               </li>
               <li>
                 Location Information
