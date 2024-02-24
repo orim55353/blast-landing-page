@@ -34,13 +34,12 @@ export const DownloadButton = () => (
 );
 
 const StyledButton = styled.button<{ size: ButtonProps["size"] }>`
-  background-color: #ffffff;
-  color: #000000;
-  padding: 0 8px;
-  font-size: 1rem;
-  font-weight: 700;
-  border-radius: 32px;
-  border: none;
+  border: 0;
+  color: #f7f7f7;
+  font-size: 18px;
+  background: linear-gradient(250deg, #250d5f40 0%, #4d22b2 100%);
+  border-radius: 6.125px;
+  padding-inline: 12px;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   display: flex;

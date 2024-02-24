@@ -4,6 +4,7 @@ const theme = {
     secondary: "#ff0080",
   },
   breakpoints: {
+    minTablet: "(min-width: 769px)",
     tablet: "(max-width: 768px)",
     laptop: "(max-width: 1150px)",
   },

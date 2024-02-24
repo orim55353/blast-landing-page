@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { DownloadButton } from "@/components/Button";
+import { Input } from "@/components/Input";
 import Image from "next/image";
 import Logo from "@/assets/logo.png";
 import Instagram from "@/assets/instagram.svg";
@@ -40,7 +41,7 @@ export default function Footer() {
                 <Link href="guidelines">Guidelines</Link>
               </li>
               <li>
-                <a>Contact</a>
+                <Link href="contact">Contact</Link>
               </li>
             </ul>
           </nav>
@@ -48,7 +49,7 @@ export default function Footer() {
         <div className="newsletter">
           <h6>Stay up to date!</h6>
           <InputContainer>
-            <Input placeholder="Sign me up!" />
+            <Input $withButton placeholder="Sign me up!" />
             <InputButton type="button">Submit</InputButton>
           </InputContainer>
         </div>
@@ -141,97 +142,8 @@ const FooterContainer = styled.footer`
   }
 `;
 
-// const TopSection = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-
-//   .logo {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 16px;
-//   }
-
-//   h6 {
-//     font-size: 2rem;
-//     margin-bottom: 16px;
-//   }
-
-//   .info-links {
-//     nav {
-//       font-weight: 300;
-
-//       ul {
-//         display: flex;
-//         flex-direction: column;
-//         gap: 8px;
-//       }
-//     }
-//   }
-
-//   ${({ theme }) => css`
-//     @media ${theme.breakpoints.tablet} {
-//       flex-direction: column;
-//       align-items: center;
-//       gap: 32px;
-//     }
-//   `}
-// `;
-
-// const BottomSection = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-
-//   .copyright {
-//     text-align: center;
-//   }
-
-//   .social-links {
-//     display: flex;
-//     justify-content: center;
-//     gap: 32px;
-//   }
-
-//   ${({ theme }) => css`
-//     @media ${theme.breakpoints.tablet} {
-//       flex-direction: column;
-//       align-items: flex-start;
-//       gap: 32px;
-
-//       .copyright,
-//       .social-links {
-//         width: 100%;
-//       }
-
-//       .copyright {
-//         text-align: start;
-//       }
-
-//       .social-links {
-//         justify-content: flex-start;
-//       }
-//     }
-//   `}
-// `;
-
 const InputContainer = styled.div`
   position: relative;
-`;
-
-const Input = styled.input`
-  width: 100%;
-  height: 50px;
-  font-size: 20px;
-  font-weight: 400;
-  border-radius: 6.125px;
-  color: #ffffff;
-  padding-inline: 8px 90px;
-  border: none;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
 `;
 
 const InputButton = styled.button`
