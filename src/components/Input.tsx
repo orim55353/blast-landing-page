@@ -9,6 +9,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>((props, ref) => {
   return <StyledInput ref={ref} {...props} />;
 });
 
+Input.displayName = "Input";
+
 const StyledInput = styled.input<{ $withButton?: boolean }>`
   width: 100%;
   height: 50px;
@@ -31,6 +33,8 @@ const TextArea = React.forwardRef<
 >((props, ref) => {
   return <StyledTextArea ref={ref} {...props} />;
 });
+
+TextArea.displayName = "TextArea";
 
 const StyledTextArea = styled.textarea`
   width: 100%;

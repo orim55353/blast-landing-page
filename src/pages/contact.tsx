@@ -25,13 +25,12 @@ function isEmailValid(email: string): boolean {
   return emailRegex.test(email);
 }
 
-export default function contact() {
+export default function Contact() {
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset: resetFormValues,
-    setValue,
   } = useForm<FormData>();
 
   function onSubmit(data: FormData) {
