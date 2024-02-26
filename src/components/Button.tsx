@@ -19,7 +19,7 @@ export default function Button({
 }
 
 const openDownloadLink = () => {
-  window.open("https://www.google.com");
+  window.open("https://apps.apple.com/us/app/blast-ignite-your-night/id6467877755");
 };
 
 export const DownloadButton = () => (

@@ -8,6 +8,7 @@ import theme from "@/styles/theme";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { sf } from "@/pages";
+import { DownloadButton } from "../Button";
 
 type HeaderProps = {
   darkenHeader?: boolean;
@@ -119,13 +120,7 @@ export default function Header({ darkenHeader }: HeaderProps) {
             )}
           </li>
           <li>
-            <Image
-              src={DownloadSVG}
-              alt="download from app store"
-              height={0}
-              width={200}
-              className="download-button img-link"
-            />
+            <DownloadButton />
           </li>
         </StyledUl>
       </nav>

@@ -9,7 +9,7 @@ export default function TermsAndConditions() {
         <ol className="toc-list">
           <li>
             Introduction
-            <p>Welcome to Blast, a social networking platform designed to facilitate connections between individuals looking to join tables or invite groups to their tables at nightclubs. Blast is operated by Blast Inc., with its registered office located at Las Vegas. By accessing or using Blast, you agree to be bound by these Terms and Conditions ({'"Terms"'}). Please read these Terms carefully before using our service. If you do not agree with the Terms, do not use Blast.</p>
+            <p>Welcome to Blast, a social networking platform designed to facilitate connections between individuals looking to join tables or invite groups to their tables at nightclubs. Blast is operated by Blastit Inc., with its registered office located at Las Vegas. By accessing or using Blast, you agree to be bound by these Terms and Conditions ({'"Terms"'}). Please read these Terms carefully before using our service. If you do not agree with the Terms, do not use Blast.</p>
           </li>
           <li>
             User Eligibility and Account Registration

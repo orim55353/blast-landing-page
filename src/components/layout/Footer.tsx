@@ -17,7 +17,7 @@ export default function Footer() {
   const Copyright = () => (
     <div className="copyright">
       <p>Copyright © {currentYear}</p>
-      <p>Blast inc. all rights reserved</p>
+      <p>Blastit inc. all rights reserved</p>
     </div>
   );
 
